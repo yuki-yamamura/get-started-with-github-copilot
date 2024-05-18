@@ -1,6 +1,6 @@
 import Counter from './';
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { userEvent } from '@testing-library/user-event';
 
 // utility queries
 function getDisplayValue(expectedValue: string) {

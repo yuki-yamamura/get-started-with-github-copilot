@@ -12,18 +12,7 @@ module.exports = {
     'jest',
     'testing-library',
   ],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
-    'plugin:jest/recommended',
-    'plugin:jest/style',
-    // 'plugin:testing-library/react',
-    'next/core-web-vitals',
-    'prettier',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:@typescript-eslint/recommended-requiring-type-checking', 'plugin:import/recommended', 'plugin:import/typescript', 'plugin:jest/recommended', 'plugin:jest/style', 'next/core-web-vitals', 'prettier', 'plugin:storybook/recommended', 'plugin:storybook/recommended'],
   rules: {
     '@typescript-eslint/no-unused-vars': [
       'error',
