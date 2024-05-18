@@ -1,9 +1,5 @@
-import styles from './index.module.scss';
+import Counter from '@/components/Counter';
 
-const Page = () => (
-  <h1 className={styles.heading}>
-    Hello, World!
-  </h1>
-);
+const Page = () => <Counter />;
 
 export default Page;
