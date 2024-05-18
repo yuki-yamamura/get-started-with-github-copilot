@@ -1,8 +1,10 @@
 import { http, HttpResponse } from 'msw';
 
+import type { Post } from '@/types/Post';
+
 export const handlers = [
   http.get('https://jsonplaceholder.typicode.com/posts', () => {
-    return HttpResponse.json([
+    const fakePosts = [
       {
         userId: 1,
         id: 1,
@@ -22,6 +24,8 @@ export const handlers = [
         title: 'ea molestias quasi exercitationem repellat qui ipsa sit aut',
         body: 'et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut',
       },
-    ]);
+    ] satisfies Post[];
+
+    return HttpResponse.json(fakePosts);
   }),
 ];
