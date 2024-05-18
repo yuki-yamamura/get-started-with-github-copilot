@@ -1,3 +1,4 @@
+import Button from './Button';
 import { useCounter } from './useCounter';
 
 import styles from './index.module.css';
@@ -11,26 +12,25 @@ const Counter = () => {
     <div className={styles.module}>
       <h1>{counter}</h1>
       <div className={styles.buttonContainer}>
-        <button
-          type="button"
+        <Button
+          label="-"
           onClick={decrement}
           disabled={isInitialValue}
-          className={styles.button}
-        >
-          -
-        </button>
-        <button type="button" onClick={increment} className={styles.button}>
-          +
-        </button>
+          type="button"
+        />
+        <Button
+          label="+"
+          onClick={increment}
+          disabled={isInitialValue}
+          type="button"
+        />
       </div>
-      <button
-        type="button"
+      <Button
+        label="Reset"
         onClick={reset}
         disabled={isInitialValue}
-        className={styles.button}
-      >
-        Reset
-      </button>
+        type="button"
+      />
     </div>
   );
 };
