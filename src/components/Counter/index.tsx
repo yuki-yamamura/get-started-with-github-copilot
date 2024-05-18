@@ -18,12 +18,7 @@ const Counter = () => {
           disabled={isInitialValue}
           type="button"
         />
-        <Button
-          label="+"
-          onClick={increment}
-          disabled={isInitialValue}
-          type="button"
-        />
+        <Button label="+" onClick={increment} type="button" />
       </div>
       <Button
         label="Reset"
